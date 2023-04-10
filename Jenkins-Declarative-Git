@@ -19,7 +19,7 @@ pipeline {
         stage("Deploy"){
             steps{
              sh """
-             sh "mv target/myweb.tar /opt/tomcat/apache-tomcat-9.0.73/webapps/ 
+             sh "mv target/myweb.tar /opt/tomcat/apache-tomcat-9.0.73/webapps/"
              sh "tomcatdown"
              sh "tomcatup"
              """
