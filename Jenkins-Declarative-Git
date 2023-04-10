@@ -17,8 +17,6 @@ pipeline {
         }
         stage("Deploy"){
             steps{
-             sh "chmod +x -R ${env.WORKSPACE}"
-             sh "chmod +x -R /opt/tomcat/apache-tomcat-9.0.73/bin/*.sh"
              sh "/opt/tomcat/apache-tomcat-9.0.73/bin/shutdown.sh"
              sh "/opt/tomcat/apache-tomcat-9.0.73/bin/startup.sh"
             }
