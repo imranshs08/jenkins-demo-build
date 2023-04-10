@@ -6,5 +6,10 @@ pipeline {
                 git 'https://github.com/imranshs08/Kubernetes.git'
             }
         }
+        stage("Maven Build"){
+            steps{
+                
+            }
+        }
     }
 }
