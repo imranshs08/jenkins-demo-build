@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage("Git Checkout"){
             steps{
-                git 'https://github.com/imranshs08/Kubernetes.git'
+                git 'https://github.com/imranshs08/jenkins-demo-build.git'
             }
         }
         stage("Maven Build"){
