@@ -17,7 +17,7 @@ pipeline {
         }
         stage("Deploy"){
             steps{
-             sh "mv /var/lib/jenkins/workspace/declarativepipeline/target/*.war /opt/tomcat/apache-tomcat-9.0.73/webapps/"
+             sh "sudo mv /var/lib/jenkins/workspace/declarativepipeline/target/*.war /opt/tomcat/apache-tomcat-9.0.73/webapps/"
              sh "tomcatdown"
              sh "tomcatup"
 
