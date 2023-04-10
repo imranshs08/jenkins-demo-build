@@ -13,6 +13,16 @@ pipeline {
         stage("Maven Build"){
             steps{
               sh "mvn clean package"  
+              sh "mv target/*.war target/myweb.tar"
+            }
+        }
+        stage("Deploy"){
+            steps{
+             sh """
+             sh "mv target/myweb.tar /opt/tomcat/apache-tomcat-9.0.73/webapps/ 
+             sh "tomcatdown"
+             sh "tomcatup"
+             """
             }
         }
     }
